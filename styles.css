@@ -31,6 +31,20 @@ body {
     gap: 20px;
 }
 
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
 .profile-info h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -87,11 +101,38 @@ h3 {
     border-bottom: 3px solid #3498db;
 }
 
-.summary p {
+.summary-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.summary-text {
+    flex: 2;
+}
+
+.summary-text h3 {
+    margin-top: 0;
+}
+
+.summary-text p {
     font-size: 1.1rem;
     line-height: 1.7;
     color: #555;
     text-align: justify;
+}
+
+.summary-photo {
+    flex: 0 0 200px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
+    max-height: 250px;
 }
 
 .job {
@@ -238,6 +279,20 @@ h3 {
     
     .profile-info h1 {
         font-size: 2rem;
+    }
+
+    .summary-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .summary-photo {
+        flex: none;
+        align-self: center;
+    }
+    
+    .profile-photo {
+        max-width: 200px;
     }
     
     .job-header {

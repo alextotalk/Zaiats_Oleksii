@@ -2,55 +2,80 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Important: Self-Updating Instructions
+## Project Overview
 
-After each session where code changes are made:
-1. **Analyze the changes made** - review what was added, modified, or removed
-2. **Update this CLAUDE.md file** - add new commands, architectural insights, or patterns discovered
-3. **Document new dependencies** - record any new libraries, frameworks, or tools introduced
-4. **Update development commands** - add any new build, test, or deployment scripts discovered or created
+This is a static resume/portfolio website for Oleksii Zaiats, a Golang/Full Stack Developer. The site is built with pure HTML, CSS, and uses Font Awesome for icons.
 
-## Project Status
+## Project Structure
 
-This repository is currently empty/new and contains only IDE configuration files. The project structure and development commands will need to be established as code is added.
+```
+/
+├── index.html          # Main resume page
+├── styles.css          # All styling and responsive design
+├── CV_Alex_Zayets_En.pdf # PDF version of resume
+├── favicon-gopher.png  # Go gopher favicon
+├── 1234.png           # Image asset
+└── CLAUDE.md          # This file
+```
 
 ## Development Commands
 
-*To be populated as the project develops*
+This is a static website with no build process required. To develop:
+
+1. **Local development**: Open `index.html` directly in a browser or use a simple HTTP server:
+   ```bash
+   python3 -m http.server 8000
+   # or
+   npx serve .
+   ```
+
+2. **Live reloading** (if needed): Use any static file server with live reload capability
 
 ## Architecture Overview
 
-*To be populated as the codebase grows*
+**Static HTML Resume Site**:
+- Pure HTML/CSS implementation with no JavaScript
+- Responsive design with mobile-first approach
+- Font Awesome icons via CDN for visual elements
+- Go gopher favicon reflecting the developer's specialization
+- Print-optimized styles for PDF generation
 
-## Development Setup
+**Key Design Patterns**:
+- CSS Grid and Flexbox for responsive layouts
+- CSS custom properties could be added for theming
+- Semantic HTML structure for accessibility
+- Mobile-responsive breakpoints at 768px
 
-When code is added to this repository, ensure to:
+## Styling Architecture
 
-1. **Initialize version control**: Run `git init` to set up version control
-2. **Define project type**: Add appropriate configuration files (package.json for Node.js, pyproject.toml for Python, etc.)
-3. **Set up development commands**: Configure build, test, and lint scripts in the appropriate configuration files
+**CSS Organization** (`styles.css`):
+- Global reset and base styles
+- Component-based sections (header, main-content, etc.)
+- Responsive design with media queries
+- Print styles for PDF generation
+- Hover effects and transitions for interactivity
 
-## IDE Configuration
+**Color Scheme**:
+- Primary: `#2c3e50` (dark blue)
+- Accent: `#3498db` (light blue)
+- Background: `#f4f4f4` (light gray)
 
-The repository includes IntelliJ IDEA/PyCharm configuration in the `.idea` directory, suggesting this project may be developed using JetBrains IDEs.
+## Content Structure
 
-## Dependencies and Libraries
+The resume includes:
+- Personal header with contact information
+- Professional summary
+- Work experience with detailed responsibilities
+- Technical skills organized by category
+- Languages proficiency
+- Education background
 
-*To be populated as dependencies are added*
+## Deployment
 
-## Testing Framework
+This static site can be deployed to:
+- GitHub Pages
+- Netlify
+- Vercel
+- Any static hosting service
 
-*To be populated when tests are added*
-
-## Build and Deployment
-
-*To be populated when build processes are established*
-
-## Next Steps for Development
-
-When starting development in this repository:
-- Determine the primary programming language and framework
-- Set up package management and dependency files
-- Configure testing framework and build tools
-- Add appropriate .gitignore for the chosen technology stack
-- Define coding standards and linting rules
+Simply upload the files to the hosting provider's root directory.
